@@ -6486,7 +6486,7 @@ void ZedCamera::publishOdomTF(rclcpp::Time t)
   // transformStamped.header.stamp);
 
   transformStamped.header.frame_id = mOdomFrameId;
-  transformStamped.child_frame_id = mBaseFrameId;
+  transformStamped.child_frame_id = "base_link";
   // conversion from Tranform to message
   tf2::Vector3 translation = mOdom2BaseTransf.getOrigin();
   tf2::Quaternion quat = mOdom2BaseTransf.getRotation();
